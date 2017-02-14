@@ -19,6 +19,10 @@ RUN apt-get install -y git
 RUN apt-get install -y zlib1g-dev \
     && docker-php-ext-install zip
 
+RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng12-dev \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install gd
+
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && echo "xdebug.var_display_max_depth = 5" >> /usr/local/etc/php/php.ini \

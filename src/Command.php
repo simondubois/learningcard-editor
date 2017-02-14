@@ -30,6 +30,8 @@ class Command extends BaseCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln('Parse input...');
-        var_dump($this->parser->parse($input->getArgument('input')));
+        $content = $this->parser->parse($input->getArgument('input'));
+
+        var_dump($content);
     }
 }

@@ -3,7 +3,8 @@
     "description": "CLI to edit cards to learn language, dates, etc...",
     "license": "GPL-3.0",
     "require": {
-        "symfony/console": "^3.2"
+        "symfony/console": "^3.2",
+        "symfony/finder": "^3.2"
     },
     "autoload": {
         "psr-4": {

@@ -51,4 +51,4 @@ RUN groupadd -r -g 1000 docker \
 ADD https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh /home/docker/.bash_gitprompt
 RUN chmod a+r /home/docker/.bash_gitprompt
 
-WORKDIR /home/docker/unsplash-downloader
+WORKDIR /home/docker/learningcard-editor

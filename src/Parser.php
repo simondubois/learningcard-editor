@@ -14,7 +14,7 @@ class Parser
         $contentLines = $this->getLines($contentRaw);
         $contentColumns = $this->getColumns($contentLines);
 
-        return $contentColumns;
+        return $this->cleanColumns($contentColumns);
     }
 
     public function getFile(string $path) : SplFileInfo
@@ -32,5 +32,12 @@ class Parser
         return array_map(function ($line) {
             return str_getcsv($line, ' ');
         }, $content);
+    }
+
+    public function cleanColumns(array $content): array
+    {
+        return array_filter($content, function ($line) {
+            return isset($line[0]);
+        });
     }
 }

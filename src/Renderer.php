@@ -50,12 +50,12 @@ class Renderer
             table {
                 border-collapse: collapse;
                 margin: auto;
+                border: 1px solid #ff8d15;
             }
             td {
                 width: 5cm;
                 height: 8cm;
                 padding: 0.25cm;
-                border: 1px solid #ff8d15;
                 background: #edebe1;
                 text-align: center;
             }

@@ -110,9 +110,9 @@ ENDHTML;
     {
         return
             '<td>'
-                .'<img src="'.$item[0].'">'
+                .'<img src="'.$item[1].'">'
                 .'<p>'
-                    .($item[1] ?? '')
+                    .($item[2] ?? '')
                 .'</p>'
             .'</td>';
     }
@@ -122,7 +122,7 @@ ENDHTML;
         return
             '<td style="background: #4c4c45;">'
                 .'<p style="font-weight: bold; color: #edebe1;">'
-                    .($item[2] ?? '')
+                    .($item[3] ?? '')
                 .'</p>'
             .'</td>';
     }
